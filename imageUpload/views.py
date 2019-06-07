@@ -5,11 +5,9 @@ from django.views.generic import TemplateView
 from .detect_face import DetectFace
 from .dominant_colors import DominantColors
 from .ApplyMakeup import ApplyMakeup
-from .getjson import GetJson
 from .tone_analysis import ToneAnalysis
 from colormath.color_objects import LabColor, sRGBColor, HSVColor
 from colormath.color_conversions import convert_color
-import operator
 
 # Create your views here.
 def init(request):

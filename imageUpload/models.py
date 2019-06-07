@@ -1,11 +1,7 @@
 from django.db import models
 import os
-import cv2
-import math
-import numpy as np
 from capstone.settings import MEDIA_ROOT
 from django.core.files import File
-from .ApplyMakeup import ApplyMakeup
 from .WhiteBalance import WhiteBalance
 from django.core.exceptions import ValidationError
 

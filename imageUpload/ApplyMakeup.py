@@ -1,10 +1,9 @@
-import itertools
+
 import scipy.interpolate
 import cv2
 import numpy as np
-from skimage import color
 from .detect_face import DetectFace
-import imutils
+
 
 class ApplyMakeup:
 

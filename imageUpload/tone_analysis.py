@@ -1,5 +1,3 @@
-from scipy.spatial import distance
-import copy
 import math
 import operator
 

@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import math
 
 def WhiteBalance(filename):
     img = cv2.imread(filename,cv2.IMREAD_COLOR)
