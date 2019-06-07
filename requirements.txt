@@ -35,7 +35,6 @@ numpy==1.15.2
 pandas==0.24.2
 pathspec==0.5.9
 pilkit==2.0
-Pillow==5.4.1
 pycparser==2.19
 pyOpenSSL==18.0.0
 pyparsing==2.4.0
