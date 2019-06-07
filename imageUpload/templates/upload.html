@@ -1,0 +1,61 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>upload</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700&display=swap&subset=korean" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/new-age.css' %}">
+
+</head>
+
+<body>
+
+	<section class="download bg-primary text-center" id="download">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mx-auto">
+					<h1 class="section-heading">얼굴 사진을 업로드 해주세요.</h1><br>
+            <div class ="inputbox">
+              <form method = "POST" action='' enctype = "multipart/form-data">
+                {% csrf_token %}
+  							{{ form.as_p }}
+
+              <br><button type="submit" class="btn btn-dark">next</button>
+						  </form>
+                </div>
+					</div>
+				</div>
+			</div>
+    </section>
+
+	<footer>
+	    <div class="container">
+	      <p>&copy; Your Website 2019. All Rights Reserved.</p>
+	      <ul class="list-inline">
+	        <li class="list-inline-item">
+	          <a href="#">Privacy</a>
+	        </li>
+	        <li class="list-inline-item">
+	          <a href="#">Terms</a>
+	        </li>
+	        <li class="list-inline-item">
+	          <a href="#">FAQ</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </footer>
+
+	</body>
+
+</html>

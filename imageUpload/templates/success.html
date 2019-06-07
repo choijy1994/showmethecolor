@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>success</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700&display=swap&subset=korean" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new-age.css' %}">
+
+</head>
+
+<body>
+  <section class="download bg-primary text-center" id="download">
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class = "container">
+          <div class="row">
+            <div class="col">
+            {% csrf_token %}
+				    <img src="{{ pic.file.url }}" width = "250px"/>
+            </div>
+          <div class="col">
+                <h1 class="section-heading">
+당신은<br>{{ my_tone }} 톤입니다
+</h1>
+
+          <div id = "make_up_button">
+            <a href="make_up"><input type="button" class="btn btn-dark" value="next"></a>
+          </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <footer>
+     <div class="container">
+       <p>&copy; Your Website 2019. All Rights Reserved.</p>
+       <ul class="list-inline">
+         <li class="list-inline-item">
+           <a href="#">Privacy</a>
+         </li>
+         <li class="list-inline-item">
+           <a href="#">Terms</a>
+         </li>
+         <li class="list-inline-item">
+           <a href="#">FAQ</a>
+         </li>
+       </ul>
+     </div>
+   </footer>
+
+</body>
+
+</html>

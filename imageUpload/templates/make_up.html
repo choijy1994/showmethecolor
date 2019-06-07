@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>upload</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700&display=swap&subset=korean" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new-age.css' %}">
+
+</head>
+
+<body>
+
+	<section class="choice bg-primary text-center" id="choice">
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class = "container">
+          <div class="row">
+
+            <div class="col">
+              <img src="{{ pic.file.url }}" width = "300px"/>
+            </div>
+            <div class="col">
+              <form method="POST" action="apply_makeup">
+                  {% for c in cosmetics %}
+                    {% csrf_token %}
+
+                  <input type="radio" name="lip" value="{{ c.name }}" id="{{ c.name }}">
+                      <label for="{{ c.name }}">
+                      <span style="background-color:rgb({{ c.R }},{{ c.G }},{{ c.B }}); display:inline-block; width:20px; height:15px;">
+                      </span>
+                      {{ c.brand }} {{ c.name }}
+                      </label>
+                  <br><br>
+                     {% endfor %}
+
+            </div>
+          </div>
+            <br><input type="submit" class="btn btn-dark" value="적용하기">
+            </form>
+          </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <footer>
+      <div class="container">
+        <p>&copy; Your Website 2019. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+</body>
+
+</html>
