@@ -37,7 +37,6 @@ pilkit==2.0
 pycparser==2.19
 pyOpenSSL==18.0.0
 pyparsing==2.4.0
-pypiwin32==219
 PySocks==1.6.8
 python-dateutil==2.7.3
 pytz==2018.9
