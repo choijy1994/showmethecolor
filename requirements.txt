@@ -12,13 +12,11 @@ cycler==0.10.0
 decorator==4.4.0
 Django==2.1.7
 django-appconf==1.0.3
-django-imagekit==4.0.2
 django-js-asset==1.2.2
 django-mptt==0.9.1
 django-polymorphic==2.0.3
 django-widget-tweaks==1.4.3
 docutils==0.14
-easy-thumbnails==2.6
 idna==2.7
 image==1.5.27
 imageio==2.5.0
